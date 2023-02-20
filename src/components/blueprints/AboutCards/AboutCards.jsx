@@ -69,7 +69,7 @@ const AboutCards = () => {
     <div className={Style.sectionsContenedor}>
       {developers?.map((element) => {
         return (
-          <Box
+          <Box width="25rem"
             sx={{ backgroundColor: "white", padding: "16px",  boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.20)',}}
             display="flex"
           >
