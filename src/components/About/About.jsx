@@ -1,7 +1,6 @@
-
 import { Typography,Box,Button} from "@mui/material";
 import AboutCards from "../blueprints/AboutCards/AboutCards";
-import Link from "react-router-dom";
+import {Link} from "react-router-dom";
 const About = () => {
   return (
     <Box bgcolor="#D5DBDB" padding="5rem" height="100%" minHeight="100vh" sx={{backgroundAttachment: 'fixed', backgroundSize: 'cover'}}>
