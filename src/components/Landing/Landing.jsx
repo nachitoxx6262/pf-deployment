@@ -1,6 +1,7 @@
 //estilos css
 import styles from "./Landing.module.css";
 // hooks
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 // dependencias MUI
@@ -10,11 +11,15 @@ import WorkspacesIcon from "@mui/icons-material/Workspaces";
 import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
 import TerminalIcon from "@mui/icons-material/Terminal";
 //componentes
-import LoginButton from "../blueprints/buttonsAuth/LoginButton";
+
 import logo from "../../Media/logo-03.png";
 import Footer from "../blueprints/Footer/Footer";
 
 const Landing = () => {
+  const [text,setText]=useState("Log In")
+  const handleClick=()=>{
+   text== "Log In" ? setText("Proximamente") : setText("Log In")
+  }
   const data = [
     {
       id:"social",
@@ -83,7 +88,9 @@ const Landing = () => {
           </ul>
         </Box>
         <Box className={styles.loginbtn}>
-          {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+        <Box width="10rem">
+      <Button  color="success" variant="contained" sx={{fontWeight:"bold"}} onClick={handleClick}>{text}</Button>
+    </Box>
         </Box>
       </Box>
 
