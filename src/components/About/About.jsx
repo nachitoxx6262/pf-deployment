@@ -1,12 +1,15 @@
 
-import { Typography,Box} from "@mui/material";
+import { Typography,Box,Button} from "@mui/material";
 import AboutCards from "../blueprints/AboutCards/AboutCards";
-import BacktoHome from "../blueprints/buttonsAuth/BacktoHome/BacktoHome";
 
 const About = () => {
   return (
     <Box bgcolor="#D5DBDB" padding="5rem" height="100%" minHeight="100vh" sx={{backgroundAttachment: 'fixed', backgroundSize: 'cover'}}>
-      <BacktoHome />
+       <div >
+        <Link to="/" style={{"textDecoration":"none"}}>
+        <Button color="success" variant="outlined" sx={{fontWeight:"bold"}}>Volver al Home</Button>
+        </Link>
+      </div>
       <Box>
         <Typography
           variant="h1"
